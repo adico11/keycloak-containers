@@ -1,3 +1,5 @@
+# THIS VERSION IS IMPORT ENABLED
+
 # Keycloak Docker image
 
 Keycloak Server Docker image.
