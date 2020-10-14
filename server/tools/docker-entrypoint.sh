@@ -27,7 +27,7 @@ file_env() {
     unset "$fileVar"
 }
 
-SYS_PROPS=""
+SYS_PROPS="-Dkeycloak.profile.feature.upload_scripts=enabled"
 
 ##################
 # Add admin user #
@@ -45,7 +45,7 @@ fi
 ############
 
 if [[ -n ${KEYCLOAK_FRONTEND_URL:-} ]]; then
-    SYS_PROPS+="-Dkeycloak.frontendUrl=$KEYCLOAK_FRONTEND_URL"
+    SYS_PROPS+=" -Dkeycloak.frontendUrl=$KEYCLOAK_FRONTEND_URL"
 fi
 
 if [[ -n ${KEYCLOAK_HOSTNAME:-} ]]; then
